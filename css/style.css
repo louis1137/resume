@@ -2,7 +2,7 @@
 
 * {--mainColor: #1876cd; --bgColor: #c3d8eb; --hoverColor:#fbfdff; --txtColor: #333; --docBgColor: #fff;}
 .dark,
-.dark * {--mainColor: #1876cd; --bgColor: #c3d8eb; --hoverColor:#0f1a23; --txtColor: #bbb; --docBgColor: #070d12;}
+.dark * {--mainColor: #cda618; --bgColor: #ebe2c3; --hoverColor:#161616; --txtColor: #bbb; --docBgColor: #070d12;}
 
 body {background-color: var(--docBgColor); transition: background-color 0.4s;}
 
