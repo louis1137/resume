@@ -1,6 +1,10 @@
 @charset "utf-8";
 
-* {--mainColor: #1876cd; --bgColor: #c3d8eb;}
+* {--mainColor: #1876cd; --bgColor: #c3d8eb; --hoverColor:#fbfdff; --txtColor: #333; --docBgColor: #fff;}
+.dark,
+.dark * {--mainColor: #1876cd; --bgColor: #c3d8eb; --hoverColor:#0f1a23; --txtColor: #bbb; --docBgColor: #070d12;}
+
+body {background-color: var(--docBgColor); transition: background-color 0.4s;}
 
 /* RESET */
 *,::before,::after {margin: 0; padding: 0; border: 0 solid transparent; outline: 0 solid transparent; box-shadow: 0 0 0 transparent; font-family: inherit; text-shadow: inherit; box-sizing: border-box; background: transparent none center center no-repeat;}
@@ -27,11 +31,15 @@ a:hover {color: #f00;}
 .tit {position: relative; padding-left: 20px;}
 .tit::before {content: ""; position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 10px; height: 10px; background-color: var(--mainColor);}
 .sub {position: relative; padding-left: 10px;}
-.sub::before {content: ""; position: absolute; top: 0.75em; left: 0; transform: translateY(-50%); width: 4px; height: 4px; background-color: #333; border-radius: 50%;}
+.sub::before {content: ""; position: absolute; top: 0.75em; left: 0; transform: translateY(-50%); width: 4px; height: 4px; background-color: var(--txtColor); border-radius: 50%;}
 .small {font-size: 0.9em;}
 
 html,body {width:100%; height:100%;}
-#wrap {overflow: hidden; margin: auto; padding: 80px 0.5em 30px; max-width: 800px; color: #333; font-family: "Nanum Gothic", sans-serif; font-size: 16px; line-height: 1.5; word-break: keep-all;}
+#wrap {overflow: hidden; position: relative; margin: auto; padding: 100px 0.5em 30px; max-width: 800px; color: var(--txtColor); font-family: "Nanum Gothic", sans-serif; font-size: 16px; line-height: 1.5; word-break: keep-all;}
+#wrap .toggle {position: absolute; top: 30px; right: 0; width: 50px; height: 24px; border-radius: 20px; border: 1px solid var(--mainColor); background-color: var(--docBgColor);}
+#wrap .toggle::before {content: "Dark Mode"; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); margin-bottom: 5px; color: var(--txtColor); font-size: 0.6em; white-space: nowrap;}
+#wrap .toggle::after {content: ""; position: absolute; top: 50%; left: 2px; transform: translateY(-50%); width: 20px; height: 20px; border-radius: 50%; background-color: var(--mainColor);  transition: left 0.4s;}
+.dark #wrap .toggle::after {left: calc(100% - 21px);}
 
 .inner {position: relative; margin: auto; height: 100%;}
 
@@ -45,26 +53,26 @@ header .contents p em+em {margin-top: 6px;}
 
 main {}
 main article {position: relative; margin: 40px 0; padding: 30px 30px 20px; border: 1px solid var(--bgColor); border-radius: 10px;}
-main article:hover {background-color: #fbfdff;}
-main article h3 {position: absolute; top: 0; left: 20px; transform: translateY(-50%); padding: 0 10px; color: var(--mainColor); font-size: 1.4em; font-weight: 700; background-color: #fff; border-radius: 100px;}
+main article:hover {background-color: var(--hoverColor);}
+main article h3 {position: absolute; top: 0; left: 20px; transform: translateY(-50%); padding: 0 10px; color: var(--mainColor); font-size: 1.4em; font-weight: 700; background-color: var(--docBgColor); border-radius: 100px; transition: background-color 0.4s;}
 
 #think .contents ul {}
 #think .contents ul li {display: flex; align-items: flex-start; justify-content: space-between;}
 #think .contents ul li+li {margin-top: 5px;}
-#think .contents ul li strong {width: 20%; color: #444; font-weight: 700;}
+#think .contents ul li strong {width: 20%; color: var(--txtColor); font-weight: 700;}
 #think .contents ul li em {width: 78%;}
 #think .contents ul li em span {display: block;}
 
 #job .contents ul {}
 #job .contents ul li {}
 #job .contents ul li+li {margin-top: 10px;}
-#job .contents ul li strong {display: block; color: #444; font-weight: 700;}
+#job .contents ul li strong {display: block; color: var(--txtColor); font-weight: 700;}
 #job .contents ul li em {display: block;}
 #job .contents ul li em span {display: block;}
 
 #skill {}
 #skill ol {display: flex; flex-wrap: wrap; margin-left: -20px;}
-#skill ol li {position: relative; margin-bottom: 0.5em; margin-left: 20px; padding: 3px 15px; background-color: #fff; border: 1px solid var(--mainColor); border-radius: 100px;}
+#skill ol li {position: relative; margin-bottom: 0.5em; margin-left: 20px; padding: 3px 15px; background-color: var(--docBgColor); border: 1px solid var(--mainColor); border-radius: 100px; transition: background-color 0.4s;}
 #skill ol li::after {content: ","; position: absolute; bottom: 0; left: 100%; margin-left: 0.2em; color: var(--mainColor); font-size: 1.4em; font-weight: 700;}
 #skill ol li:last-child::after {content: none;}
 
