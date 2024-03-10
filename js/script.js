@@ -84,3 +84,23 @@ document.addEventListener("DOMContentLoaded", () => {
 	console.log(getDevice().device)
 	document.querySelector('#wrap').setAttribute('data-device', getDevice().device)
 });
+
+
+document.addEventListener("mousemove", e => {
+	console.log(e)
+	document.querySelector('#cursor1').style.top = e.clientY+'px';
+	document.querySelector('#cursor1').style.left = e.clientX+'px';
+	setTimeout(() => {
+		document.querySelector('#cursor2').style.top = e.clientY+'px';
+		document.querySelector('#cursor2').style.left = e.clientX+'px';
+	}, 100);
+});
+
+document.addEventListener("mousedown", e => {
+	document.querySelector('#cursor1').style.top = e.clientY+'px';
+	document.querySelector('#cursor1').style.left = e.clientX+'px';
+	setTimeout(() => {
+		document.querySelector('#cursor2').style.top = e.clientY+'px';
+		document.querySelector('#cursor2').style.left = e.clientX+'px';
+	}, 100);
+});
