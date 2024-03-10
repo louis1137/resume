@@ -10,13 +10,17 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./css/style.css">
 	<script src="./js/script.js"></script>
 </head>
 <body>
-	<div id="wrap">
-		<button type="button" class="toggle"></button>
+	<div id="wrap" data-device="pc">
+		<div class="toggle_wrap">
+			<button type="button" class="toggle"></button>
+		</div>
 		<header>
+			<div class="profile"></div>
 			<div class="inner">
 				<h1 class="hidden">경력기술서</h1>
 				<div class="contents">
@@ -250,29 +254,6 @@
 						</ul>
 					</div>
 				</article>
-				<article id="game">
-					<h3>게임경험</h3>
-					<div class="contents">
-						<ol>
-							<li>
-								<strong>PUBG - </strong>
-								<em class="small">steam: 1,750시간, kakao: 1850시간</em>
-							</li>
-							<li>
-								<strong>LOL - </strong>
-								<em class="small">Lv.320</em>
-							</li>
-							<li>
-								<strong>LOST ARK - </strong>
-								<em class="small">도화가(Lv1640), 바드(Lv1620), 아르카나(Lv1620)</em>
-							</li>
-							<li>
-								<strong>ETC - </strong>
-								<em class="small">오버워치, 에이펙스 레전드,  서든어택 등등...</em>
-							</li>
-						</ol>
-					</div>
-				</article>
 				<article id="links">
 					<h3>참고 링크</h3>
 					<div class="contents">
@@ -288,10 +269,35 @@
 						</ol>
 					</div>
 				</article>
+				<article id="game">
+					<h3>게임경험</h3>
+					<div class="contents">
+						<ol>
+							<li class="hover">
+								<strong>PUBG</strong>
+								<em class="small">steam: 1,750시간<br>kakao: 1,850시간</em>
+							</li>
+							<li class="hover">
+								<strong>LOL</strong>
+								<em class="small">Lv.320</em>
+							</li>
+							<li class="hover">
+								<strong>LOST ARK</strong>
+								<em class="small">도화가(Lv1640)<br>바드(Lv1620)<br>아르카나(Lv1620)</em>
+							</li>
+							<li class="hover">
+								<strong>ETC</strong>
+								<em class="small">오버워치<br>에이펙스 레전드<br> 서든어택 등등...</em>
+							</li>
+						</ol>
+					</div>
+				</article>
 			</div>
 		</main>
 		<footer>
-			<div class="inner"></div>
+			<div class="inner">
+				<strong>감사합니다</strong>
+			</div>
 		</footer>
 	</div>
 </body>
