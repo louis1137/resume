@@ -87,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener("mousemove", e => {
-	console.log(e)
 	document.querySelector('#cursor1').style.top = e.clientY+'px';
 	document.querySelector('#cursor1').style.left = e.clientX+'px';
 	setTimeout(() => {
