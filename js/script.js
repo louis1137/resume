@@ -81,8 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			document.body.className = 'dark';
 		}
 	});
-	console.log(getDevice().device)
-	document.querySelector('#wrap').setAttribute('data-device', getDevice().device)
+	document.querySelector('#wrap').setAttribute('data-device', getDevice().device);
 });
 
 
