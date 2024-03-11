@@ -38,7 +38,7 @@ a:hover {color: #f00;}
 .small {font-size: 0.9em;}
 
 html,body {width:100%; height:100%;}
-#wrap {position: relative; margin: auto; padding: 100px 0.5em 30px; max-width: 800px; color: var(--txtColor); font-family: "Nanum Gothic", sans-serif; font-size: 16px; line-height: 1.5; word-break: keep-all;}
+#wrap {position: relative; margin: auto; padding: 100px 0.6em 30px; max-width: 800px; color: var(--txtColor); font-family: "Nanum Gothic", sans-serif; font-size: 16px; line-height: 1.5; word-break: keep-all;}
 #wrap[data-device="mo"] {padding-top: 2em;}
 #wrap .button_wrap {display: flex; flex-wrap: wrap; padding-top: 1.1em; justify-content: center; position: fixed; z-index: 2; width: 50px; background-color: var(--docBgColor); border-radius: 3px; transition: background-color 0.4s;}
 #wrap .button_wrap .toggle {position: relative; width: 50px; height: 24px; border-radius: 20px; border: 1px solid var(--mainColor); background-color: var(--docBgColor);}
@@ -104,7 +104,7 @@ main article::after {content: ""; position: absolute; z-index: 2; top: 0%; left:
 #career .contents ul li+li {margin-top: 60px;}
 #career .contents ul li+li::before {content: ""; position: absolute; top: -30px; left: 0; right: 0; height: 1px; background-color: var(--bgColor); opacity: 0.5;}
 #career .contents ul li .name {width: 22%;}
-#career .contents ul li .name strong {display: block;}
+#career .contents ul li .name strong {display: block; word-break: break-all;}
 #career .contents ul li .name span {display: block;}
 #career .contents ul li .contents {width: 75%;}
 #career .contents ul li .contents dl {margin: 0;}
