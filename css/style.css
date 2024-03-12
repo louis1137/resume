@@ -28,6 +28,10 @@ fieldset {min-width: 0; max-width: 100%;}
 textarea {resize: none;}
 a {color: var(--mainColor);}
 a:hover {color: #f00;}
+mark {display: inline-block; position: relative; z-index: 1;}
+mark::before {content: ""; position: absolute; top: 50%; bottom: 0%; left: 0; right: 0; z-index: -1; background-color: var(--mainColor);}
+mark::before {opacity: 0.2;}
+.dark mark::before {opacity: 0.4;}
 
 /* CLASS */
 .hidden {display: none !important;}
