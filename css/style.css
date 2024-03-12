@@ -101,6 +101,20 @@ main article::after {content: ""; position: absolute; z-index: 2; top: 0%; left:
 #skill ol li::after {content: ","; position: absolute; bottom: 0; left: 100%; margin-left: 0.2em; color: var(--mainColor); font-size: 1.4em; font-weight: 700;}
 #skill ol li:last-child::after {content: none;}
 
+#project {}
+#project .contents {}
+#project .contents ul {}
+#project .contents ul li {position: relative; align-items: flex-start; justify-content: space-between;}
+#project .contents ul li+li {margin-top: 60px;}
+#project .contents ul li+li::before {content: ""; position: absolute; top: -30px; left: 0; right: 0; height: 1px; background-color: var(--bgColor); opacity: 0.5;}
+#project .contents ul li strong {}
+#project .contents ul li p {padding-top: 5px;}
+#project .contents ul li p em {display: flex; padding-left: 10px; position: relative;}
+#project .contents ul li p em::before {content: "-"; position: absolute; top: 0.75em; left: 0; transform: translateY(-50%);}
+#project .contents ul li p em span {position: relative;}
+#project .contents ul li p em span+span {margin-left: 10px;}
+#project .contents ul li p em span+span::before {content: ":"; position: absolute; top: 0; left: -7px;}
+
 #career {}
 #career .contents {}
 #career .contents ul {}
