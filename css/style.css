@@ -42,11 +42,11 @@ mark::before {opacity: 0.2;}
 .small {font-size: 0.9em;}
 
 html,body {width:100%; height:100%;}
-#wrap {position: relative; margin: auto; padding: 100px 0.6em 30px; max-width: 800px; color: var(--txtColor); font-family: "Nanum Gothic", sans-serif; font-size: 16px; line-height: 1.5; word-break: keep-all;}
+#wrap {position: relative; margin: auto; padding: 40px 0.6em 30px; max-width: 800px; color: var(--txtColor); font-family: "Nanum Gothic", sans-serif; font-size: 16px; line-height: 1.5; word-break: keep-all;}
 #wrap[data-device="mo"] {padding-top: 2em;}
 #wrap .button_wrap {display: flex; flex-wrap: wrap; padding-top: 1.1em; justify-content: center; position: fixed; z-index: 2; width: 50px; background-color: var(--docBgColor); border-radius: 3px; transition: background-color 0.4s;}
 #wrap .button_wrap .toggle {position: relative; width: 50px; height: 24px; border-radius: 20px; border: 1px solid var(--mainColor); background-color: var(--docBgColor);}
-#wrap[data-device="pc"] .button_wrap {top: 80px; left: 50%; margin-left: 420px;}
+#wrap[data-device="pc"] .button_wrap {top: 40px; left: 50%; margin-left: 420px;}
 #wrap[data-device="mo"] .button_wrap {bottom: 1em; right: 1em;}
 #wrap .toggle::before {content: "Dark Mode"; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); margin-bottom: 5px; color: var(--txtColor); font-size: 0.6em; white-space: nowrap;}
 #wrap .toggle::after {content: ""; position: absolute; top: 50%; left: 2px; transform: translateY(-50%); width: 20px; height: 20px; border-radius: 50%; background-color: var(--mainColor);  transition: left 0.4s;}
@@ -63,10 +63,12 @@ html,body {width:100%; height:100%;}
 .inner {position: relative; margin: auto; height: 100%;}
 
 header {position: relative; padding-top: 190px;}
+header h1 {margin-bottom: 30px; align-items: center; font-size: 2.5em; font-weight: 700; text-align: center;}
+.intro header {padding-top: 0;}
 header .profile {position: absolute; top: 0; left: 50%; transform: translateX(-50%); padding: 4px; width: 180px; height: 180px; background-color: var(--mainColor); background-image: url(../img/profile.png); background-size: 70% 70%; background-position: 50% 55%; background-clip: content-box; border-radius: 50%; border: 2px solid var(--mainColor);}
 header .inner {padding-bottom: 40px; border-bottom: 2px dashed var(--bgColor);}
 header .contents {position: relative; display: flex; align-items: center; justify-content: space-between;}
-header .contents h2 {font-family: "Noto Sans KR", sans-serif; font-size: 2.5em; font-weight: 600;}
+header .contents h2 {font-family: "Noto Sans KR", sans-serif; font-size: 2.2em; font-weight: 500;}
 header .contents p {padding: 10px;}
 header .contents p em {display: block; position: relative;}
 header .contents p em::before {content: ""; position: absolute; top: 50%; right: 100%; transform: translateY(-50%); margin-right: 6px; width: 26px; height: 26px; background-color: var(--mainColor); border-radius: 50%; background-position: 48% 53%; background-size: 80%; opacity: 0.9;}
@@ -144,6 +146,13 @@ main article::after {content: ""; position: absolute; z-index: 2; top: 0%; left:
 #game ol li:nth-child(3):before {background-image: url(../img/game_lostark.png);}
 #game ol li:nth-child(4):before {background-image: url(../img/game_etc.png);}
 #game ol li em {display: block;}
+
+#intro {}
+#intro h4 {color: var(--mainColor); font-size: 1.2em; font-weight: 700;}
+#intro strong {display: block; margin-top: 20px;}
+#intro .contents ul li {position: relative; align-items: flex-start; justify-content: space-between;}
+#intro .contents ul li+li {margin-top: 60px;}
+#intro .contents ul li+li::before {content: ""; position: absolute; top: -30px; left: 0; right: 0; height: 1px; background-color: var(--bgColor); opacity: 0.5;}
 
 footer {}
 footer .inner {border-top: 2px dashed var(--bgColor);}
