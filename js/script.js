@@ -73,12 +73,23 @@ function getDevice () {
 	};
 }
 
+let isDark = sessionStorage.isDark == 'true';
+
 document.addEventListener("DOMContentLoaded", () => {
+
+	if(isDark) {
+		document.body.className = 'dark';
+	} else {
+		document.body.removeAttribute('class');
+	}
+
 	document.querySelector('.toggle').addEventListener('click', e => {
 		if(document.body.classList[0] == 'dark') {
 			document.body.removeAttribute('class');
+			sessionStorage.setItem('isDark', false);
 		} else {
 			document.body.className = 'dark';
+			sessionStorage.setItem('isDark', true);
 		}
 	});
 	document.querySelector('#wrap').setAttribute('data-device', getDevice().device);
